@@ -1,0 +1,65 @@
+<!doctype html>
+<html>
+<head>
+    <title> Jouella Fabe </title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/normalize.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link href='http://fonts.googleapis.com/css?family=Vollkorn' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="/css/animate.css">
+
+    <link rel="stylesheet" href="/css/style.css">
+    <script type="text/javascript"
+            src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js">
+    </script>
+    <script type="text/javascript" src="/css/jquery.scrollmagic.min.js"></script>
+    <script type="text/javascript" src="/css/animate.js"></script>
+</head>
+<body>
+<section class="section page1">
+    <div class="container" >
+        <div class="type">
+            <div class="img">
+                <img src="/css/jojo-pic.jpg">
+            </div>
+            <h1>
+                My name is Jouella Fabe
+            </h1>
+        </div>
+    </div>
+</section>
+<section class="section page2">
+    <div class="container">
+        <h2>
+            I like experimenting with
+            beautiful typography,
+            <br>unstructured data sets,
+            <br>recent programming languages
+        </h2>
+    </div>
+</section>
+<section class="section page3">
+    <script>
+        $(document).ready(function($){
+            var tween = TweenMax.to("#page3", 0.5);
+
+            // build scene
+            var scene = new ScrollScene({triggerElement: "#page3"})
+                    .setTween(tween)
+                    .addTo(controller);
+            // show indicators (requires debug extension)
+            scene.addIndicators();
+        });
+    </script>
+    <div class="container">
+        <h2>
+            I am learning on how to be a better
+            <br><span id="designer">designer</span>
+            <br><span class="descriptions" id="developer">developer</span>
+            <br><span id="data">data scientist</span>
+        </h2>
+    </div>
+</section>
+</body>
+</html>
