@@ -56,10 +56,10 @@ $('document').ready(function($) {
 
     $('img').on({
         'mouseover' : function() {
-            $(this).attr('src','jojo-after.jpg');
+            $(this).attr('src','/css/jojo-after.jpg');
         },
         mouseout : function() {
-            $(this).attr('src','jojo-pic.jpg');
+            $(this).attr('src','/css/jojo-pic.jpg');
         }
     });
 
