@@ -63,11 +63,11 @@ $('document').ready(function($) {
         }
     });
 
-    $('#developer').addClass('animated fadeInLeft');
-    $('#data').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
-        $(this).addClass('animated fadeInLeft');
-    });
+//    $('#developer').addClass('animated fadeInLeft');
+//    $('#data').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
+//        $(this).addClass('animated fadeInLeft');
+//    });
+    var page2 = document.getElementsByClassName("designer");
+    var tweenLite = new TweenLite(page2, 10.5);
 
-
-    var controller = new ScrollMagic();
 });
