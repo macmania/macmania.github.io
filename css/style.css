@@ -42,9 +42,8 @@ h1{
 h2{
     font-family: 'Open Sans', sans-serif;
     text-align:center;
-    font-size: xx-large;
+    font-size: x-large;
     padding-left: 50px;
-    padding-top: 100px;
     position: relative;
 }
 
@@ -62,7 +61,7 @@ section.page2 section.page3{
     background-color:  #f00;
 }
 
-#spa .page2 .page3 .page4{
+#spa .page3 .page4{
     position: relative;
     top: 10px;
     left: 10px;
@@ -73,6 +72,10 @@ section.page2 section.page3{
 }
 
 section.page1{ background-color: #f99;}
-section.page2{ background-color: #ffadad;}
 section.page3{ background-color: #fff8de;}
+
+section.page2{
+    background-color: #ffadad;
+    padding-top: 5px;
+}
 
