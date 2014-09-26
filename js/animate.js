@@ -62,12 +62,26 @@ $('document').ready(function($) {
             $(this).attr('src','/img/jojo-pic.jpg');
         }
     });
+    var cont = new ScrollMagic();
+    var tween = TweenLite.to("#designer",.5, {"visibility": "visible"});
+    var scene = new ScrollScene({duration: 100, triggerElement: "#better"})
+        .setTween(tween)
+        .addTo(cont);
+    var s2 = new ScrollScene({duration: 50})
+                .setPin('#experiment')
+                .addTo(cont);
+    cont.addScene([
+        scene, s2
+    ])
+    //scene.addIndicators();
+
 
 //    $('#developer').addClass('animated fadeInLeft');
 //    $('#data').one('webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', function(){
 //        $(this).addClass('animated fadeInLeft');
 //    });
-    var page2 = document.getElementsByClassName("designer");
-    var tweenLite = new TweenLite(page2, 10.5);
+
+    //var tweenLite = new TweenLite(page2, 1.5, {delay: 10});
 
 });
+
