@@ -27,10 +27,7 @@ img{
     padding-top: 20px;
 }
 
-#developer{ visibility: hidden; }
-#designer{ visibility: hidden; }
-#data{ visibility: hidden; }
-
+#developer #designer #data { visibility: hidden; }
 
 h1{
     font-family: vollkorn;

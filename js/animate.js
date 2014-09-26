@@ -62,17 +62,59 @@ $('document').ready(function($) {
             $(this).attr('src','/img/jojo-pic.jpg');
         }
     });
-    var cont = new ScrollMagic();
-    var tween = TweenLite.to("#designer",.5, {"visibility": "visible"});
-    var scene = new ScrollScene({duration: 100, triggerElement: "#better"})
-        .setTween(tween)
-        .addTo(cont);
-    var s2 = new ScrollScene({duration: 50})
-                .setPin('#experiment')
-                .addTo(cont);
-    cont.addScene([
-        scene, s2
-    ])
+    var sceneOptions = {duration: 200, offset: -100};
+    var controller = new ScrollMagic();
+
+    //fade designer
+    new ScrollScene(sceneOptions)
+        .addTo(controller)
+        .triggerHook("onCenter")
+        .triggerElement("#designer")
+        .setTween(TweenMax.from("#designer", 1, {autoAlpha: 0}));
+
+    new ScrollScene(sceneOptions)
+        .addTo(controller)
+        .triggerHook("onCenter")
+        .triggerElement("#developer")
+        .setTween(TweenMax.from("#developer", 1, {autoAlpha: 0}));
+
+    new ScrollScene(sceneOptions)
+        .addTo(controller)
+        .triggerHook("onCenter")
+        .triggerElement("#data")
+        .setTween(TweenMax.from("#data", 1, {autoAlpha: 0}));
+
+    new ScrollScene(sceneOptions)
+        .addTo(controller)
+        .triggerHook("onCenter")
+        .triggerElement("#type")
+        .setTween(TweenMax.from("#type", 1, {autoAlpha: 0}));
+
+    new ScrollScene(sceneOptions)
+        .addTo(controller)
+        .triggerHook("onCenter")
+        .triggerElement("#dataset")
+        .setTween(TweenMax.from("#dataset", 1, {autoAlpha: 0}));
+
+    new ScrollScene(sceneOptions)
+        .addTo(controller)
+        .triggerHook("onCenter")
+        .triggerElement("#language")
+        .setTween(TweenMax.from("#language", 1, {autoAlpha: 0}));
+
+
+
+//
+//    var tween = TweenLite.to("#designer",.5, {"visibility": "inherit", opacity: 1});
+//    var scene = new ScrollScene({duration: 100, triggerElement: "#trigger2"})
+//        .setTween(tween)
+//        .addTo(cont);
+//    var s2 = new ScrollScene({duration: 50})
+//                .setPin('#experiment')
+//                .addTo(cont);
+//    cont.addScene([
+//        scene, s2
+//    ])
     //scene.addIndicators();
 
 
