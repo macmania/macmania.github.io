@@ -54,8 +54,6 @@ var menu1 = (function($){
 
 jQuery(document).ready( function() { menu1.initModule(jQuery('#menu1')); });
 
-
-
 $('document').ready(function($) {
 
     $('img').on({
@@ -90,11 +88,12 @@ $('document').ready(function($) {
         .triggerElement("#type")
         .setTween(tween1);
 
-    $('.overlay.sidebar')
-        .sidebar({
-            overlay: true
-        })
+    jQuery('.sidebar').sidr();
+
+    $('.sidebar')
         .sidebar('toggle')
     ;
+
+
 });
 
