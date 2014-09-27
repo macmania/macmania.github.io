@@ -90,7 +90,11 @@ $('document').ready(function($) {
         .triggerElement("#type")
         .setTween(tween1);
 
-    $('.sidebar').sidebar('toggle');
-
+    $('.overlay.sidebar')
+        .sidebar({
+            overlay: true
+        })
+        .sidebar('toggle')
+    ;
 });
 
