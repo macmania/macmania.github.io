@@ -1,4 +1,6 @@
-var spa = (function($){
+
+
+var menu1 = (function($){
     var configMapSlider = {
         extended_height:  100,
         extended_title: 'Click to retract',
@@ -43,12 +45,14 @@ var spa = (function($){
         $chatSlider
             .attr('title', configMapSlider.retracted_title)
             .click(onClickSlider);
+
+
         return true;
     };
     return {initModule : initModule};
 }(jQuery));
 
-jQuery(document).ready( function() { spa.initModule(jQuery('#spa')); });
+jQuery(document).ready( function() { menu1.initModule(jQuery('#menu1')); });
 
 
 
@@ -86,6 +90,7 @@ $('document').ready(function($) {
         .triggerElement("#type")
         .setTween(tween1);
 
+    $('.sidebar').sidebar('toggle');
 
 });
 

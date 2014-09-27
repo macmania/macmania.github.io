@@ -77,3 +77,31 @@ section.page2{
     padding-top: 5px;
 }
 
+
+
+/***Menu on the side**/
+#side-menu{
+    background-color: #ffcc99;
+    font-family: vollkorn;
+    font-size: 25px;
+}
+
+
+#side-menu a{
+    color: black;
+    padding: 20px;
+    line-height: 2.5;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    display: block;
+}
+
+#side-menu a:hover, a:focus{
+    background: #b3d4fc;
+    background-size: 80px 60px;
+    -webkit-transition: all 0.5s ease-in-out;
+    padding-left:20px;
+    padding-right:20px;
+}
+
