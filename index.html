@@ -20,18 +20,30 @@
     <script src="/js/animate.js"></script>
     <script src="//cdn.jsdelivr.net/semantic-ui/0.19.3/javascript/semantic.min.js"></script>
     <script src="/js/jquery.sidr.min.js"></script>
+    <script src="/js/menu.js"></script>
+    <script>
+        $(function (){
+               menu.initModule($('#menu_btn'));
+        }());
+    </script>
+
+
+
 </head>
 <body>
 
-<div class="ui thin left sidebar" id="side-menu">
-    <a class="item side active" id="home" >Home</a>
-    <a class="item side" id="projects">Side Projects</a>
-    <a class="item" id="opensource">Open Source</a>
-    <a class="item side" id="blog">Blog</a>
-    <a class="item side" id="coursework">Coursework</a>
-</div>
+
+
+<!--<div class="ui thin left sidebar" id="side_menu">-->
+    <!--<a class="item side active" id="home" >Home</a>-->
+    <!--<a class="item side" id="projects">Side Projects</a>-->
+    <!--<a class="item" id="opensource">Open Source</a>-->
+    <!--<a class="item side" id="blog">Blog</a>-->
+    <!--<a class="item side" id="coursework">Coursework</a>-->
+<!--</div>-->
 
 <section class="section page1">
+    <div class="ui green button" style="position: relative; left: 20px; top: 20px; background: #331e1e; color: white" id="menu_btn">Menu</div>
     <div class="container" >
         <div class="type" style="padding-top:150px">
             <div class="img">
