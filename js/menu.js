@@ -35,15 +35,19 @@ var menu = (function(){
         var $container = stateMap.$container;
         jqueryMap = {
             $container: $container,
-            $menubtn: $container.find('#menu_btn'),
-            $body: $container.find('body')
+            $menubtn: $('#menu_btn'),
+            $body: $('body')
         };
     };
 
     toggleButton = function (do_extend) {
         if(do_extend){
+            //jqueryMap.$body.animate()
             jqueryMap.$body.append(configMap.menu_html);
             return true;
+            $('.sidebar')
+            .sidebar('toggle');
+
         }
         jqueryMap.$body.removeChild("#side_menu");
         return true;
@@ -52,7 +56,7 @@ var menu = (function(){
     onClickMenu = function(event){
         toggleButton(stateMap.is_menu_retracted);
         return false;
-    }
+    };
 
     initModule = function($container){
         stateMap.$container = $container;
@@ -61,6 +65,6 @@ var menu = (function(){
         jqueryMap.$menubtn
             .attr('title', "click to see menu options")
             .click(onClickMenu);
-    }
+    };
     return {initModule:initModule}
 }());
