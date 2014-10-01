@@ -15,7 +15,7 @@ body{
 }
 
 
-img{
+img.jojopic{
     border-radius: 50%;
 }
 
@@ -80,14 +80,14 @@ section.page2{
 
 
 /***Menu on the side**/
-#side-menu{
+#side_menu{
     background-color: #ffcc99;
     font-family: vollkorn;
     font-size: 25px;
 }
 
 
-#side-menu a{
+#side_menu a{
     color: black;
     padding: 20px;
     line-height: 2.5;
@@ -97,7 +97,7 @@ section.page2{
     display: block;
 }
 
-#side-menu a:hover, a:focus{
+#side_menu a:hover, a:focus{
     background: #b3d4fc;
     background-size: 80px 60px;
     -webkit-transition: all 0.5s ease-in-out;

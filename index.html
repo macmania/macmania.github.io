@@ -21,18 +21,6 @@
     <script src="//cdn.jsdelivr.net/semantic-ui/0.19.3/javascript/semantic.min.js"></script>
     <script src="/js/jquery.sidr.min.js"></script>
     <script src="/js/menu.js"></script>
-    <script>
-
-            var button = document.getElementById("menu_btn");
-            // add onclick event
-            button.onclick = function() {
-                $('.sidebar').sidebar('toggle');
-
-            };
-    </script>
-
-
-
 </head>
 <body>
 
@@ -47,11 +35,30 @@
 </div>
 
 <section class="section page1">
-    <div class="ui green button" style="position: relative; left: 20px; top: 20px; background: #331e1e; color: white" id="menu_btn" value="click">Menu</div>
+    <div class="followButtons ui grid">
+        <div class="row">
+        <div class="wide column" style="float:right; padding-right:15%; padding-top:.25%">
+            <div class="linkedin-menu">
+                <a href="http://www.linkedin.com/pub/jouella-fabe/33/4a8/261">
+                    <img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_viewmy_160x33.png" width="160" height="33" border="0" alt="View Jouella Fabe's profile on LinkedIn">
+                </a>
+            </div>
+        </div>
+        <div class="column" style="float:right; position:inherit; padding-right:10%; padding-top:.5%">
+            <div class="twitter-menu">
+                <a href="https://twitter.com/jmfabe" class="twitter-follow-button" data-show-count="false">Follow @jmfabe</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+            </div>
+        </div>
+
+        </div>
+    </div>
+    <div class="ui green button" style="position: relative; left: 20px; background: #331e1e; color: white" id="menu_btn" value="click">Menu</div>
     <div class="container" >
         <div class="type" style="padding-top:150px">
             <div class="img">
-                <img src="/img/jojo-pic.jpg">
+                <img class="jojopic" src="/img/jojo-pic.jpg">
             </div>
             <h1>
                 Hi, my name is Jouella Fabe
@@ -98,5 +105,11 @@
 </section>
 </body>
 <script>
+
+    var button = document.getElementById("menu_btn");
+    // add onclick event
+    button.onclick = function() {
+        $('.sidebar').sidebar('toggle');
+    };
 </script>
 </html>

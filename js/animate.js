@@ -1,6 +1,6 @@
 $('document').ready(function($) {
 
-    $('img').on({
+    $('img.jojopic').on({
         'mouseover' : function() {
             $(this).attr('src','/img/jojo-after.jpg');
         },
@@ -32,9 +32,10 @@ $('document').ready(function($) {
         .triggerElement("#type")
         .setTween(tween1);
 
-    jQuery('.sidebar').sidr();
-
-//    $('.sidebar')
-//        .sidebar('toggle');
+    var button = document.getElementById("menu_btn");
+    // add onclick event
+    button.onclick = function() {
+        $('.sidebar').sidebar('toggle');
+    };
 });
 
