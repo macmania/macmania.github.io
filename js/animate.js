@@ -12,9 +12,10 @@ $('document').ready(function($) {
     var controller = new ScrollMagic();
 
     var tween = new TimelineMax()
-        .add(TweenMax.from("#designer", 1, {autoAlpha: 0}))
-        .add(TweenMax.from("#developer", 1, {autoAlpha: 0}))
-        .add(TweenMax.from("#data", 1, {autoAlpha: 0}));
+        .add(TweenMax.from("#what-would-hh-say", 1, {autoAlpha: 0}))
+        .add(TweenMax.from("#how-is-us-doing", 1, {autoAlpha: 0}))
+        .add(TweenMax.from("#serve-me", 1, {autoAlpha: 0}))
+        .add(TweenMax.from("#build-me-a-sentence", 1, {autoAlpha:0}));
 
     var tween1 = new TimelineMax()
         .add(TweenMax.from("#type", 1, {autoAlpha: 0}))
@@ -24,7 +25,7 @@ $('document').ready(function($) {
 
     new ScrollScene(sceneOptions)
         .addTo(controller)
-        .triggerElement("#designer")
+        .triggerElement("#what-would-hh-say")
         .setTween(tween);
 
     new ScrollScene(sceneOptions)

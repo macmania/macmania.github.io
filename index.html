@@ -22,14 +22,16 @@
     </script>
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/latest/TimelineMax.min.js"></script>
+    <script src="/js/TweenMax.min.js"></script>
+    <script src="/js/TimelineMax.min.js"></script>
     <script src="/js/jquery.scrollmagic.min.js"></script>
     <script src="/js/animate.js"></script>
     <script src="//cdn.jsdelivr.net/semantic-ui/0.19.3/javascript/semantic.min.js"></script>
     <script src="/js/jquery.sidr.min.js"></script>
     <script src="/js/menu.js"></script>
-
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.5.0-beta.2/angular-animate.js"></script>
+    <script src="/js/app.js"></script>
 </head>
 <body>
 
@@ -39,85 +41,160 @@
     <a class="item side active" id="home" >Home</a>
     <a class="item side" href="#projects" id="projects">Side Projects</a>
     <a class="item" href="//github.com/macmania" id="opensource">Open Source</a>
-    <a class="item side" href="//jojofabe.tumblr.com/" id="blog">Blog</a>
+    <a class="item side" href="//jojofabe.tumblr.com/" id="blog">Poems</a>
     <a class="item side" id="coursework">Coursework</a>
 </div>
 
 <section class="section page1">
     <div class="followButtons ui right aligned grid" style="width:75%;float:right;">
-        <div class="right floated center aligned  two column row" style="padding-top: 1.0%;background-color: transparent;padding-right: 2%;width: 25%;">
-
-          <div class="column" style="width: 10%;">
-              <div class="ui segment" style="float: center; border-color: transparent; background-color:transparent;">
-                <div class="linkedin-menu">
-                    <a href="http://www.linkedin.com/pub/jouella-fabe/33/4a8/261" style="text-decoration: none;">
-                        <i class="large linkedin icon" style="font-size:2.25em;"></i>
-                    </a>
+        <div class="ui right floated center aligned two column grid" style="padding-top: 1.0%;background-color: transparent;width: 25%;">
+            <div class="row">
+                <div class="column">
+                      <div class="ui segment" style="float: center; border-color: transparent; background-color:transparent;">
+                        <div class="linkedin-menu">
+                            <a href="http://www.linkedin.com/pub/jouella-fabe/33/4a8/261" style="text-decoration: none;">
+                                <i class="large linkedin icon" style="font-size:2.25em;"></i>
+                            </a>
+                        </div>
+                      </div>
                 </div>
-      	      </div>
-        </div>
 
-        <div class="column" style="width: 10%;">
-           <div class="ui segment" style="background-color:transparent;">
-             <div class="twitter-menu">
-                  <a href="https://twitter.com/jmfabe" class="twitter-follow-button" data-show-count="false" style="text-decoration: none;">
-                        <!--<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>-->
-                        <i class="large twitter icon" style="font-size:2.25em;"></i>
-                    </a>
-              </div>
-           </div>
+                <div class="column"">
+                   <div class="ui segment" style="background-color:transparent;">
+                     <div class="twitter-menu">
+                          <a href="https://twitter.com/jmfabe" class="twitter-follow-button" data-show-count="false" style="text-decoration: none;">
+                                <i class="large twitter icon" style="font-size:2.25em;"></i>
+                            </a>
+                      </div>
+                   </div>
+                </div>
+            </div>
         </div>
-
-      </div>
     </div>
 
     <div class="ui green button" style="position: relative; margin-top:.50%; margin-left:1.25%; background: #331e1e; color: white" id="menu_btn" value="click">Menu</div>
     <div class="container" >
-        <div class="type" style="padding-top:150px">
+        <div class="type" style="padding-top:150px; padding-bottom: 100px;">
             <div class="img">
                 <img class="jojopic" src="/img/jojo-pic.jpg">
             </div>
-            <h1>
-                Hi, my name is Jouella Fabe
-            </h1>
-        </div>
-    </div>
-</section>
-<section class="section page2">
-    <div class="container">
-        <div class="row">
-            <div>
-                <h1>
-                    I like experimenting with
-                </h1>
-                <div id="experiment" class="ui grid">
-                    <div class="center column">
-                        <h2  style="padding-top: 0px; text-align:center;">
-                            <span id="type">beautiful typography</span>
-                            <br><span id="dataset" class="spacing" style="line-height: 75px; ">unstructured data sets</span>
-                            <span id="language" class="spacing" style="line-height: 40px;"><br>recent programming languages</span>
+            <div class="ui grid">
+                <div class="row">
+                    <div class="column"><h1>Hi, my name is Jouella Fabe.</h1></div>
+                </div>
+                <div class="row">
+                    <div class="column"><h2>I'm a poet, hacker and an aspiring data scientist</h2></div>
+                </div>
+                <div class="row">
+                    <div class="column">
+                        <h2>
+                            <span>In my spare time, I ravish books, go to meetups,
+                                write poetry and code</span>
                         </h2>
                     </div>
                 </div>
             </div>
-        </div>
+         </div>
     </div>
 </section>
 <section class="section page3" id="p3">
-    <script>
+    <div ng-app="personalWebsiteApp" class="container">
+        <div id="trigger2"></div>
+        <div ng-controller="ProjectController" id="projects" class="ui grid">
+            <div class="row">
+                <div class="column">
+                    <h1 style="text-align: left;">Projects</h1>
+                    <!--<button ng-click="show_tech" ng-model="show" ng-init="show=true" class="ui inverted teal button">-->
+                        <!--<span>show tech stack for all projects</span>-->
+                    <!--</button>-->
+                </div>
+            </div>
 
-    </script>
-    <div class="container">
-        <h1>
-            I am learning on how to be a better
-        </h1>
-        <div id="trigger2"> </div>
-        <div id="better" class="ui three column grid">
-            <div class="column"><h2><span id="designer">designer</span></h2></div>
-            <div class="column"><h2><span class="descriptions" id="developer">developer</span></h2></div>
-            <div class="column"><h2><span id="data">data scientist</span></h2></div>
+            <div class="row">
+                <div id="what-would-hh-say" class="column">
+                    <div class="well">
+                        <div class="row">
+                            <div class="column"><h2>a gag project that would generate random sentences of an hh group</h2></div>
+                        </div>
+                        <div>
+                            <a href="https://thawing-mesa-1655.herokuapp.com/">
+                                <img class="ui centered massive image" src="/img/Markov-Bot.png">
+                            </a>
+                        </div>
+                        <span class="animate-if">
+                            <div class="row">
+                                <div class="column"><h3>
+                                    language: python
+                                    <br>framework: flask
+                                    <br>cloud service: heroku
+                                </h3></div>
+                            </div>
+                        </span>
+                    </div>
+                </div>
+                </div>
+            <div class="row">
+                <div id="how-is-us-doing" class="column">
+                    <div class="well">
+                        <div class="row">
+                            <div class="column"><h2>a data visualization website to visualize how the US is doing in organ donations</h2></div>
+                        </div>
+                        <div class="row">
+                            <a href="/cdsshack_columbia_2015/">
+                                <img class="ui centered massive image" src="/img/visualize-organ-donation.png">
+                            </a>
+                        </div>
+                        <div class="row">
+                            <span class="tech animate-if">
+                                <div class="column">
+                                    <h3>
+                                        language: javascript
+                                        <br>libraries: datamap, a library built on top of d3
+                                    </h3>
+                                </div>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="serve-me" class="column">
+                    <div class="well">
+                        <h2>a texting web service that would allow users to hail a cab, check their facebook status on their phone</h2>
+                        <div>
+
+                        </div>
+                        <span class="animate-if tech">
+                            <h3>
+                                languages: golang, python
+                                <br>cloud service: google app engine
+                            </h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div id="build-me-a-sentence" class="column">
+                    <div class="well">
+                        <h2>a website that would allow users to generate their own sentences</h2>
+                        <div>
+                            <a href="/simplenlg_frontend">
+                                <img class="ui centered massive image" src="/img/generate-sentence.png">
+                            </a>
+                        </div>
+
+                        <span class="animate-if tech">
+                            <h3>
+                                languages: java, javascript
+                                <br><span>framework: spark (a sinatra inspired java framework), angularjs</span>
+                                <br>libraries: simplenlg, stanford nlp
+                                <br>cloud service: heroku
+                            </h3>
+                        </span>
+                    </div>
+                </div>
+            </div>
         </div>
-
     </div>
 </section>
 </body>
