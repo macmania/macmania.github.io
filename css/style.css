@@ -1,4 +1,4 @@
-a {
+a.item {
   color: #00B7FF;
 }
 
@@ -22,9 +22,14 @@ img.jojopic{
 .section{
     min-height: 100%;
     width: 100%;
+    overflow:hidden;
 }
 .descriptions {
     padding-top: 20px;
+}
+
+.followButtons{
+  height:10%;
 }
 
 #developer #designer #data { visibility: hidden; }
@@ -66,7 +71,7 @@ section.page2 section.page3{
     bottom: 10px;
     right: 10px;
     border-radius: 8px 8px 8px;
-    max-width: 1000px;
+    width: 100%;
 }
 
 section.page1{ background-color: #f99;}
@@ -105,3 +110,23 @@ section.page2{
     padding-right:20px;
 }
 
+.linkedin-menu .twitter-follow-button a:hover{
+    background:#0B93CB;
+}
+
+.icon a{
+ background: #3E8AA7;
+}
+
+
+
+/**
+* Media queries that are less than
+*/
+
+
+@media (min-width:960px){
+  div.column .linkedin-menu{
+    min-width:50%;
+  }
+}
