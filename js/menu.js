@@ -10,6 +10,8 @@
 
 /* global $, spa */
 
+//doesn't work correctly
+
 var menu = (function(){
     var
         configMap = {

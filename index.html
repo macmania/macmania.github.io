@@ -2,6 +2,7 @@
 <html>
 <head>
     <title> Jouella Fabe </title>
+    <link rel="canonical" href="{{site.url}}{{page.url}}"/>
     <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
@@ -12,6 +13,14 @@
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="//cdn.jsdelivr.net/semantic-ui/0.19.3/css/semantic.min.css">
 
+    {% if site.enforce_ssl %}
+        <script type="text/javascript">
+            var enforce = "{{site.enforce_ssl}}";
+            //var host = "macmania.github.io";
+            if ((enforce == window.location.host) && (window.location.protocol != "https:"))
+                window.location.protocol = window.location.toString().replace(/^http:/, "https:");
+        </script>
+    {% endif %}
 
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>
@@ -21,6 +30,7 @@
     <script src="//cdn.jsdelivr.net/semantic-ui/0.19.3/javascript/semantic.min.js"></script>
     <script src="/js/jquery.sidr.min.js"></script>
     <script src="/js/menu.js"></script>
+
 </head>
 <body>
 
@@ -105,7 +115,6 @@
 </section>
 </body>
 <script>
-
     var button = document.getElementById("menu_btn");
     // add onclick event
     button.onclick = function() {
